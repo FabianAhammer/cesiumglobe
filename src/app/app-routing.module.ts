@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { OverviewComponent } from './components/overview/overview.component';
 
-const routes: Routes = [];
+const routes: Routes = [{
+  path: "",
+  pathMatch: "full",
+  redirectTo: 'overview'
+}, { path: 'overview', component: OverviewComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+
+}
